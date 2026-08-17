@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: headroom-mcp-bridge
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BASE_URL
+        value: https://headroom-mcp-bridge.onrender.com
