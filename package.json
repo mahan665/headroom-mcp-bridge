@@ -1,10 +1,11 @@
 {
   "name": "headroom-mcp-bridge",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "start": "supergateway --stdio 'npx -y @headroomlabs/headroom-mcp' --port 8080 --baseUrl \"$BASE_URL\" --ssePath /sse --messagePath /message"
+    "start": "supergateway --stdio \"uvx --from 'headroom-ai[all]' headroom mcp serve\" --port $PORT --baseUrl \"$BASE_URL\" --ssePath /sse --messagePath /message --cors"
   },
   "dependencies": {
-    "supergateway": "^1.0.0"
+    "supergateway": "^3.4.3"
   }
 }
